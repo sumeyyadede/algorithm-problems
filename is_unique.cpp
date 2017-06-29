@@ -28,4 +28,4 @@ int main(int argc, char **argv) {
 	cout << isUniqueHT(input) << endl;
 	
 	return 0;
-}				
+}
