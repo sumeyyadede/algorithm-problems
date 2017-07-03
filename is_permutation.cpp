@@ -18,13 +18,7 @@ bool isPermutationHT(string str1,string str2){
 	map<char, int> ht;
 	char* cstr1= (char*) str1.c_str();
 	for(int i = 0; i<str1.length(); i++) {
-
-		if(ht[cstr1[i]] == 0){
-			ht[cstr1[i]] = ht[cstr1[i]] + 1;
-		}
-		else {
-			ht[cstr1[i]] = ht[cstr1[i]] + 1;
-		}
+		ht[cstr1[i]] = ht[cstr1[i]] + 1;
 	}
 
 	char* cstr2 = (char*) str2.c_str();
@@ -41,15 +35,15 @@ bool isPermutationHT(string str1,string str2){
 		else {
 			return false;
 		}
-
+		
 		return true;
 	}
 }
 
 int main(int argc, char **argv){
 
-	string string1 = "sumeyya";
-	string string2 = "suyyaem";
+	string string1 = "sumyeya";
+	string string2 = "suymeya";
 
 	cout << isPermutationHT(string1,string2) << endl;
 
