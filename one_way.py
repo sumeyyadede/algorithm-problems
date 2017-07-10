@@ -1,7 +1,8 @@
+
 def one_way(string1, string2):
 	l1 = len(string1)
 	l2 = len(string2)
-	if abs(l1 - l2) > 1:
+	if abs(l1 - l2) > 1:  
 		return False
 	has_operated = False
 	i = 0
@@ -20,8 +21,8 @@ def one_way(string1, string2):
 	return True
 
 def main():
-	string1 = "pales"
-	string2 = "pale"
+	string1 = "pale"
+	string2 = "paske"
 	iow = one_way(string1, string2)
 	print(iow)
 

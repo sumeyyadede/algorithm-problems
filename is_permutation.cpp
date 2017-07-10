@@ -23,27 +23,19 @@ bool isPermutationHT(string str1,string str2){
 
 	char* cstr2 = (char*) str2.c_str();
 	for(int i=0; i<str2.length(); i++){
-
-		if(ht[cstr2[i]] != 0){
-			ht[cstr2[i]] = ht[cstr2[i]] - 1;
+		ht[cstr2[i]] = ht[cstr2[i]] - 1;
 
 		 if(ht[cstr2[i]] < 0){
 		 	return false;
 		 }
-		}
-
-		else {
-			return false;
-		}
-		
-		return true;
 	}
+	return true;
 }
 
 int main(int argc, char **argv){
 
-	string string1 = "sumyeya";
-	string string2 = "suymeya";
+	string string1 = "syyueya";
+	string string2 = "suyyeya";
 
 	cout << isPermutationHT(string1,string2) << endl;
 

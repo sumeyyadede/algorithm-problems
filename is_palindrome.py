@@ -15,8 +15,6 @@ def is_palindrome(string):
 				has_visited_odd = True
 	return True
 
-
-
 def main():
 	string = "TactCoa"
 	isp = is_palindrome(string)
