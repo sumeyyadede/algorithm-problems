@@ -10,7 +10,7 @@ bool isPalindromeHT(string str){
 	for(int i=0; i<len; i++){
 		str[i] = tolower(str[i]);
 	}
-	int has_visited_odd = 0;
+	int has_visited_odd = len % 2 == 0 ? 1 : 0;
 	
 	map<char, int> ht;
 	char* cstr= (char*) str.c_str();
@@ -19,11 +19,11 @@ bool isPalindromeHT(string str){
 	}
 
 	for(int i=0; i<ht.size(); i++){
-		if((ht[i]%2)==1){
+		if((ht[i]%2)==1) {
 			if(has_visited_odd==1){
 				return false;
 			}
-			else{
+			else {
 				has_visited_odd=1;
 			}
 		}
@@ -32,8 +32,7 @@ bool isPalindromeHT(string str){
 }
 
 int main(){
-
-	string str = "TactCoa";
+	string str = "Taccatsd";
 	cout << isPalindromeHT(str) << endl; 
 
 	return 0;
