@@ -4,7 +4,16 @@ using namespace std;
 
 void zero_matrix(int **matrix,int x,int y){
 
-	int rowArray[x]={0,0,0,0}, colArray[y]={0,0,0,0,0};
+	int rowArray[x];
+	int colArray[y];
+
+	for(int i=0; i<x; i++){
+		rowArray[i] = 0;
+	}
+
+	for(int j=0; j<y; j++){
+		colArray[j] = 0;
+	}
 
 	for(int i=0; i<x; i++){
 		for(int j=0; j<y; j++){
@@ -45,6 +54,8 @@ int main(){
 		}
 	}
 
+	matrix[2][2] = 0;
+
 	for(int i=0; i<x; i++){
 		for(int j=0; j<y; j++){
 			cout<< matrix[i][j] << "\t";
@@ -53,7 +64,7 @@ int main(){
 	}
 
 	cout<< endl;
-	
+
 	zero_matrix(matrix,x,y);
 
 	for(int i=0; i<x; i++){
@@ -62,5 +73,6 @@ int main(){
 		}
 		cout<< endl;
 	}
+	
 	return 0;
 }
