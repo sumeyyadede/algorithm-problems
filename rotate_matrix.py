@@ -29,7 +29,7 @@ def rotate_matrix(matrix,len):
 
 def main():
 
-	len = 4;
+	len = 4
 	matrix = [[0 for _ in xrange(len)] for _ in xrange(len)] 
 	
 	for i in xrange(len):
