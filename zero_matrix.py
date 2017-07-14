@@ -16,12 +16,12 @@ def zero_matrix(matrix,len1,len2):
 				colList[j] = 1
 
 	for i in xrange(len1):
-		if (rowList[i] == 1):
+		if rowList[i] == 1:
 			for z in xrange(len2):
 				matrix[i][z] = 0
 
 	for j in xrange(len2):
-		if (colList[j] == 1):
+		if  colList[j] == 1:
 			for z in xrange(len1):
 				matrix[z][j] = 0
 
@@ -38,7 +38,7 @@ def main():
 		for j in xrange(len2):
 			matrix[i][j] = i + j
 
-	matrix[3][2] = 0
+	matrix[1][2] = 0
 
 	for i in xrange(len1):
 		t = ""
