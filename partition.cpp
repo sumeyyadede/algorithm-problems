@@ -23,8 +23,7 @@ public:
 		head = NULL;
 	}
 	void printAll();
-	void inserToFront(int);
-	void insertToBack(int);
+	void insert(int);
 	void setHead(Node*);
 	Node* getHead();
 
@@ -39,26 +38,7 @@ void LinkedList::setHead(Node* node){
 Node* LinkedList::getHead(){
 	return this->head;
 }
-void LinkedList::printAll(){
-	Node* p;
-	p = head;
-	while(p != NULL){
-		cout << p->data << endl;
-		p = p->next;
-	}
-}
-void LinkedList::insertToBack(int value){
-	Node* node = new Node;
-	node->data = value;
-	if(head == NULL){
-		node->next = NULL;
-	}
-	else{
-		node->next = head;
-	}
-	head = node;
-}
-void LinkedList::inserToFront(int value){
+void LinkedList::insert(int value){
 	Node* node = new Node;
 	if(head == NULL){
 		head = node;
@@ -73,52 +53,58 @@ void LinkedList::inserToFront(int value){
 	node->data = value;
 	node->next = NULL;
 }
+void LinkedList::printAll(){
+	Node* p;
+	p = head;
+	while(p != NULL){
+		cout << p->data << endl;
+		p = p->next;
+	}
+}
 
 void partition(LinkedList* linked_list, int x){
-	Node* node = linked_list->getHead();
-	Node* prev_node = NULL;
-	Node* head2 = NULL;
-	Node* tail2 = NULL;
+	Node* p_node = linked_list->getHead();
+	Node* p_prev_node = NULL;
+	Node* p_head2 = NULL;
+	Node* p_tail2 = NULL;
 
-	while(node != NULL){
-		if(((Node*) node)->data < x){
-			if(head2 == NULL){
-				head2 = node;
-				tail2 = node;
-				// cout << tail2->data<< endl;
+	while(p_node != NULL){
+		if(p_node->data < x){
+			if(p_head2 == NULL){
+				p_head2 = p_node;
+				p_tail2 = p_node;
 			}
 			else{
-				((Node*) node)->next = (Node*) node;
-				tail2 = node;
-				// cout<< tail2->data<<endl;
+				p_tail2->next = p_node;
+				p_tail2 = p_node;
 			}
-			if(prev_node == NULL){
-				linked_list->setHead(((Node*) node)->next);
+			if(p_prev_node == NULL){
+				linked_list->setHead(p_node->next);
 			}
 			else{
-				((Node*) prev_node)->next = ((Node*) node)->next;
+				p_prev_node->next = p_node->next;
 			}
 		}
 		else{
-			prev_node = node;
+			p_prev_node = p_node;
 		}
-		node = ((Node*) node)->next;
+		p_node = p_node->next;
 	}
-    ((Node*) tail2)->next = linked_list->getHead();
-	linked_list->setHead(((Node*)head2));
+    p_tail2->next = linked_list->getHead();
+	linked_list->setHead(p_head2);
 }
 
 int main(){
 
 	LinkedList* list = new LinkedList;
-	list->insertToBack(1);
-	list->insertToBack(9);
-	list->inserToFront(2);
-	list->inserToFront(6);
-	list->inserToFront(4);
-	list->inserToFront(3);
-	list->inserToFront(8);
-	list->inserToFront(9);
+	list->insert(1);
+	list->insert(9);
+	list->insert(2);
+	list->insert(6);
+	list->insert(4);
+	list->insert(3);
+	list->insert(8);
+	list->insert(9);
 	list->printAll();
 	cout<< endl << endl;
 	partition(list,5);
