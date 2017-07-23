@@ -15,7 +15,7 @@ def sum_lists(l1,l2,l3):
 			temp = temp.next
 		else:
 			y=0
-		z = x+y + remainder
+		z = x + y + remainder
 		remainder = z / 10
 		l3.insert_front(z % 10)
 	if remainder == 1:
