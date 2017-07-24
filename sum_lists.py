@@ -1,6 +1,7 @@
 from ll import LinkedList
 
-def sum_lists(l1,l2,l3):
+def sum_lists(l1,l2):
+	l3	 = LinkedList()
 	node = l1.head
 	temp = l2.head
 	remainder = 0
@@ -20,6 +21,7 @@ def sum_lists(l1,l2,l3):
 		l3.insert_front(z % 10)
 	if remainder == 1:
 		l3.insert_front(1)
+	return l3
 
 def print_ll(t):
 	while t:
@@ -40,8 +42,7 @@ def main():
 	l2.insert(7)
 	l2.insert(8)
 	print_ll(l2.head)
-	l3 = LinkedList()
-	sum_lists(l1,l2,l3)
+	l3 = sum_lists(l1,l2)
 	print_ll(l3.head)
 
 if __name__ == "__main__":
