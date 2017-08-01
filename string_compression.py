@@ -1,3 +1,4 @@
+
 def compress(string):
 	result = str()
 	count = 1
