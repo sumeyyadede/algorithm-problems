@@ -34,8 +34,8 @@ def create_bst_optimized(arr, start = None, end = None):
 def preorder_traverse(n):
 	if not n:
 		return
-	preorder_traverse(n.left)
 	print(n, end=", ")
+	preorder_traverse(n.left)
 	preorder_traverse(n.right)
 
 def main():

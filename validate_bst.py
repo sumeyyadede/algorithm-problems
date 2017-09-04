@@ -65,6 +65,7 @@ def validate_bst_min_max(node, mi = None, ma = None):
 	return True
 
 def main():
+	
 	root = Node(1)
 	a = Node(2)
 	b = Node(3)

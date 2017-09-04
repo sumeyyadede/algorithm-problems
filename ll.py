@@ -8,10 +8,12 @@ class LinkedList(object):
 	def __init__(self):
 		self.head = None
 		self.tail = None
+
 	def insert(self, data):
 		n = Node(data)
 		n.next = self.head
 		self.head = n
+
 	def insert_front(self,data):
 		n = Node(data)
 		if self.head == None:
@@ -19,6 +21,7 @@ class LinkedList(object):
 		if self.tail != None:
 			self.tail.next = n
 		self.tail = n
+
 	def pop(self):
 		t = None
 		if self.head:

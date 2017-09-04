@@ -20,7 +20,7 @@ def selecting_sorting(arr):
 def merge_sorting(arr):
 	pass
 	
-def main():
+def main():	
 	arr = [13,12,10,44,5,67,34,32,1,23]
 	bubble_sorting(arr)
 	for i in xrange(len(arr)):
