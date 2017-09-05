@@ -1,6 +1,6 @@
 package com.sumeyya.main;
 
-public class Animal {
+public abstract class Animal {
 	
 	private String name;
 	private Integer age;

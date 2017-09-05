@@ -1,6 +1,6 @@
 package com.sumeyya.main;
 
-public class HumanAnimal extends Animal {
+public class HumanAnimal extends Animal implements IAnimal {
 
 	public HumanAnimal() {
 		super();
@@ -19,6 +19,15 @@ public class HumanAnimal extends Animal {
 		System.out.println("bunu yiyorum: " + animal);
 		
 	}
-	
+
+	@Override
+	public void reproduce(IAnimal animal) {
+		System.out.println(getName() + " mating: " + animal);
+	}
+
+	@Override
+	public void play() {
+		System.out.println(getName() + " Playing like a monster!");
+	}
 
 }
