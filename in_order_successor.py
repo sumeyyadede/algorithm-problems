@@ -44,8 +44,8 @@ def main():
 	root.left.right.left.parent = root.left.right
 	root.left.right.right = Node(12)
 	root.left.right.right.parent = root.left.right
-	print(in_order_successor(root.left.right.right))
+	print(in_order_successor(root.left.left))
 
 if __name__ == "__main__":
 	main()
-
+	

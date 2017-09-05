@@ -9,6 +9,7 @@ class Stack(object):
 		n = Node(data)
 		n.next = self.head
 		self.head = n
+		return self.head
 
 	def pop(self):
 		if self.is_empty():
@@ -18,37 +19,40 @@ class Stack(object):
 		return data
 
 	def is_empty(self):
-		return self.head == None
+		return (self.head == None)
 
 	def peek(self):
 		return self.head.data if self.head else None
 
+	def peek_node(self):
+		return self.head if self.head else None
+
 def main():
-	node = Stack()
+	stack = Stack()
 	print("is empty?")
-	print(node.is_empty())
-	node.push(3)
-	node.push(5)
-	node.push(7)
-	node.push(9)
-	node.push(2)
-	node.push(5)
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	print(node.pop())
-	data = node.peek()
+	print(stack.is_empty())
+	stack.push(3)
+	stack.push(5)
+	stack.push(7)
+	stack.push(9)
+	stack.push(2)
+	stack.push(5)
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	print(stack.pop())
+	data = stack.peek()
 	print(data)
 	print("is empty?")
-	print(node.is_empty())
+	print(stack.is_empty())
 
 if __name__ == "__main__":
 	main()

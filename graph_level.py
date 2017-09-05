@@ -10,7 +10,6 @@ class Node(object):
 		return "({})".format(self.data)
 
 def create_ll(node, depth_lists, level = 0):
-	depth_lists = {}
 	if not node:
 		return
 	if not level in depth_lists:

@@ -150,16 +150,15 @@ def main():
 	n.next = AnimalNode(animals[1])
 	n.next_same_kind = AnimalNode(animals[2])
 
-
-
 	q = AnimalQueue()
+	q.enqueue(AnimalNode(Animal("Dog 1", Kind.DOG)))
 	q.enqueue(AnimalNode(Animal("Cat 1", Kind.CAT)))
 	q.enqueue(AnimalNode(Animal("Cat 2", Kind.CAT)))
 	q.enqueue(AnimalNode(Animal("Cat 3", Kind.CAT)))
 	q.enqueue(AnimalNode(Animal("Cat 4", Kind.CAT)))
 	q.enqueue(AnimalNode(Animal("Cat 5", Kind.CAT)))
 	q.enqueue(AnimalNode(Animal("Cat 6", Kind.CAT)))
-	q.enqueue(AnimalNode(Animal("Dog 1", Kind.DOG)))
+	q.enqueue(AnimalNode(Animal("Dog 2", Kind.DOG)))
 
 	print(q.dequeue_dog())
 
