@@ -23,7 +23,6 @@ def is_permutation_sorted(string1, string2):
 		return False
 	str1 = sorted(string1)
 	str2 = sorted(string2)
-	i = 0
 	if str1 == str2:
 		return True
 	return False
@@ -31,7 +30,7 @@ def is_permutation_sorted(string1, string2):
 
 def main():
 	string1 = "omeeerr "
-	string2 = "eerrrmo "
+	string2 = "eeerrmo "
 	ip = is_permutation(string1, string2)
 	print(ip)
 
