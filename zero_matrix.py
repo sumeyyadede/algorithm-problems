@@ -1,5 +1,5 @@
 
-def zero_matrix(matrix,len1,len2):
+def zero_matrix(matrix, len1, len2):
 
 	rowList = []
 	for i in xrange(len1):
@@ -24,7 +24,7 @@ def zero_matrix(matrix,len1,len2):
 		if  colList[j] == 1:
 			for z in xrange(len1):
 				matrix[z][j] = 0
-
+				
 	return True
 
 def main():
@@ -48,7 +48,7 @@ def main():
 
 	print("")
 
-	zero_matrix(matrix,len1,len2)
+	zero_matrix(matrix, len1, len2)
 
 	for i in xrange(len1):
 		t = ""

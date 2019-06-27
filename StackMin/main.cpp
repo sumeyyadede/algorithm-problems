@@ -29,7 +29,7 @@ int main(){
 	// cout << intStack->pop() << endl;
 	// cout << intStack->isEmpty() << endl;
 
-	StackMin* minStack = new StackMin;
+	StackMin* minStack = new StackMin();
 	minStack->push(4);
 	minStack->push(8);
 	minStack->push(6);

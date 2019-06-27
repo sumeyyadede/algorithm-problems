@@ -39,7 +39,7 @@ class SetOfStacks(object):
 	def is_empty(self):
 		return self.setof_stacks.is_empty()
 	
-	def pop_at(self,sub_stack):
+	def pop_at(self, sub_stack):
 		diff = self.sub_index - sub_stack
 		if diff < 0:
 			return None

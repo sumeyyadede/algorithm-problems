@@ -20,7 +20,7 @@ def main():
 	ll.insert("e")
 	ll.insert("f")
 	print_ll(ll.head)
-	node = ll.head.next.next
+	node = ll.head.next.next.next
 	middle_node(node)
 	print_ll(ll.head)
 

@@ -24,7 +24,7 @@ def main():
 	ll.insert("t")
 	ll.insert("a")
 	ll.insert("t")
-	ll.insert("c")
+	ll.insert("b")
 	ll.insert("a")
 	isp = is_palindrome_ll(ll)
 	print(isp)

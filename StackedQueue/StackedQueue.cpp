@@ -5,6 +5,7 @@ StackedQueue::StackedQueue(){
 	stack2 = new Stack();
 	isPushed = false;
 }
+
 int StackedQueue::moveToStack1(){
 	if(!isPushed){
 		while(!stack2->isEmpty()){
@@ -13,6 +14,7 @@ int StackedQueue::moveToStack1(){
 	isPushed = true;
 	}
 }
+
 int StackedQueue::moveToStack2(){
 	if(isPushed){
 		while(!stack1->isEmpty()){
@@ -21,14 +23,17 @@ int StackedQueue::moveToStack2(){
 	isPushed = false;
 	}
 }
+
 int StackedQueue::push(int data){
 	moveToStack1();
 	stack1->push(data);
 }
+
 int StackedQueue::pop(){
 	moveToStack2();
 	return stack2->pop();
 }
+
 bool StackedQueue::isEmpty(){
 	return stack1->isEmpty() && stack2->isEmpty();
 		

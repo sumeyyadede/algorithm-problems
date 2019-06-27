@@ -21,6 +21,7 @@ def is_unique_sorted(string):
 			j = j + 1
 		i = i + 1
 	return True
+
 def is_unique_ht(string):
 	ht = dict()
 	for char in string:
@@ -32,7 +33,7 @@ def is_unique_ht(string):
 
 def main():
 	string = "Omer"
-	iu = is_unique_ht(string)
+	iu = is_unique_ht(string.lower())
 	print(iu)
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 from ll import LinkedList
 import math
 
-def sum_lists(l1,l2):
+def sum_lists(l1, l2):
 	l3	 = LinkedList()
 	node = l1.head
 	temp = l2.head
@@ -11,12 +11,13 @@ def sum_lists(l1,l2):
 			x = node.data
 			node = node.next
 		else:
-			x=0
+			x = 0
+			
  		if temp:
 			y = temp.data
 			temp = temp.next
 		else:
-			y=0
+			y = 0
 		z = x + y + remainder
 		remainder = z / 10
 		l3.insert_front(z % 10)

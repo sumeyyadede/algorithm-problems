@@ -32,7 +32,6 @@ class LinkedList(object):
 	def is_empty(self):
 		return self.head == None
 
-
 def main():
 	ll = LinkedList()
 	ll.insert(1)

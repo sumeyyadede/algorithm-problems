@@ -7,6 +7,7 @@ def find_duplicates(linked_list):
 	while node:
 		if node.data in ht:
 			prev_node.next = node.next
+			print(prev_node.data)
 		else:
 			ht[node.data] = 1
 			prev_node = node

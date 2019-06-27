@@ -32,13 +32,13 @@ def print_ll(t):
 def main():
 	ll = LinkedList()
 	ll.insert(2)
-	ll.insert(6)
+	ll.insert(1)
 	ll.insert(3)
 	ll.insert(9)
 	ll.insert(4)
 	ll.insert(6)
 	print_ll(ll.head)
-	partition(ll, 4)
+	partition(ll, 6)
 	print_ll(ll.head)
 
 if __name__ == "__main__":

@@ -5,7 +5,7 @@ class Stack(object):
 	def __init__(self):
 		self.head = None
 
-	def push(self,data):
+	def push(self, data):
 		n = Node(data)
 		n.next = self.head
 		self.head = n

@@ -13,6 +13,8 @@ def one_way(string1, string2):
 					string1 = string1[:i] + string1[i+1:]
 				elif l1 < l2:
 					string1 = string1[:i] + string2[i] + string1[i:]
+				else:
+					string1 = string1[:i] + string2[i] + string1[i+1:]
 				has_operated = True
 			else:
 				return False
@@ -22,7 +24,7 @@ def one_way(string1, string2):
 
 def main():
 	string1 = "pale"
-	string2 = "paske"
+	string2 = "bake"
 	iow = one_way(string1, string2)
 	print(iow)
 

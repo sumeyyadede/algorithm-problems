@@ -1,11 +1,11 @@
 from __future__ import print_function
 
-def rotate_matrix(matrix,len):
+def rotate_matrix(matrix, len):
 
-	if len==0:
+	if len == 0:
 		return False
 
-	for layer in xrange(len/2):
+	for layer in xrange(len / 2):
 		print("layer: " + str(layer))
 		first = layer
 		last = len-1-first
@@ -30,8 +30,8 @@ def rotate_matrix(matrix,len):
 def main():
 
 	len = 4
-	matrix = [[0 for _ in xrange(len)] for _ in xrange(len)] 
-	
+	matrix = [[0 for _ in xrange(len)] for _ in xrange(len)]
+
 	for i in xrange(len):
 	 	for j in xrange(len):
 	 		matrix[i][j] = i * len + j
@@ -42,7 +42,7 @@ def main():
 			t = t + str(matrix[i][j]) + "\t"
 		print(t)
 
-	rotate_matrix(matrix,len)
+	rotate_matrix(matrix, len)
 
 	t = ""
 	for i in xrange(len):

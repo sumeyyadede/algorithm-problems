@@ -1,16 +1,17 @@
 from ll import LinkedList
 
-def kth_element(linked_list,counter):
+def kth_element(linked_list, counter):
 	node = linked_list.head
 	prev_node = linked_list.head
 
 	i=0
 	while node:
-		if i==counter-1:
+		if i == counter - 1:
 			break
 		node = node.next
-		i = i+1
-	if i !=  counter-1:
+		i = i + 1
+
+	if i !=  counter - 1:
 		print("not enough elements in the list")
 		return #None
 
@@ -42,10 +43,10 @@ def main():
 	ll.insert(40)
 	ll.insert(30)
 	ll.insert(20)
-	#ll.insert(10)
+	ll.insert(10)
 	print_ll(ll.head)
 	print("return the 5th to last element.")
-	print(kth_element(ll,5))
+	print(kth_element(ll, 5))
 
 if __name__ == "__main__":
 	main()
